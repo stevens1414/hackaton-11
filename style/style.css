@@ -72,10 +72,21 @@ body .calculadora-grilla {
       grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
+body .enlace {
+  margin: 0 auto;
+}
+
 body .enlace a {
   background-color: white;
   width: 200px;
   height: 200px;
+  text-decoration: none;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 20px;
+  padding: 20px;
 }
 
 .calculadora-grilla > button {

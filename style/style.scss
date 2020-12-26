@@ -15,11 +15,17 @@ background: linear-gradient(219deg, rgba(36,0,21,1) 0%, rgba(121,9,111,1) 50%, r
     }
     
     .enlace{
-        
+        margin: 0 auto;
         a{
             background-color: white;
             width: 200px;
             height: 200px;
+            text-decoration: none;
+            text-align: center;
+            align-items: center;
+            top: 20px;
+            padding: 20px;
+
         }
     }
  
