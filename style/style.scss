@@ -10,11 +10,20 @@ background: linear-gradient(219deg, rgba(36,0,21,1) 0%, rgba(121,9,111,1) 50%, r
         min-height: 100vh;
         grid-template-columns: repeat(4, 100px);
         grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+
+        
     }
+    
+    
+ 
+}
+
+.calculadora-grilla > a{
+ 
 }
 
 .calculadora-grilla > button{
-    cursor: pointer;
+   
     font-size: 2rem;
     border: 1px solid #79096f;
     outline: none;
@@ -43,5 +52,6 @@ text-align: right;
 outline: none;
     }
 }
+
 
 
