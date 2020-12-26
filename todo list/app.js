@@ -1,22 +1,11 @@
 console.log('Suscríbete amig@ al canal 😍')
-
-const formulario = document.getElementById('formulario');;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+const formulario = document.getElementById('formulario')
 const input = document.getElementById('input')
 const listaTarea = document.getElementById('lista-tareas')
 const template = document.getElementById('template').content
 const fragment = document.createDocumentFragment()
-// let tareas = {
-//     1605990629039: {
-//         id: 1605990629039,
-//         texto: 'Tarea #1',
-//         estado: false
-//     },
-//     1605990682337: {
-//         id: 1605990682337,
-//         texto: 'Tarea "2',
-//         estado: false
-//     }
-// }
+
 let tareas = {}
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -30,13 +19,11 @@ listaTarea.addEventListener('click', e => {
     btnAccion(e)
 })
 
-// console.log(Date.now())
+
 
 formulario.addEventListener('submit', e => {
     e.preventDefault()
-    // console.log(e.target[0].value)
-    // console.log(e.target.querySelector('input').value)
-    // console.log(input.value)
+    
     setTarea(e)
 })
 
@@ -51,7 +38,7 @@ const setTarea = e => {
         estado: false
     }
     tareas[tarea.id] = tarea
-    // console.log(tareas)
+   
     formulario.reset()
     input.focus()
     pintarTareas()
@@ -89,24 +76,24 @@ const pintarTareas = () => {
 }
 
 const btnAccion = e => {
-    // console.log(e.target.classList.contains('fa-check-circle'))
+    
     if (e.target.classList.contains('fa-check-circle')) {
-        // console.log(e.target.dataset.id)
+       
         tareas[e.target.dataset.id].estado = true
         pintarTareas()
-        // console.log(tareas)
+      
     }
 
     if (e.target.classList.contains('fa-minus-circle')) {
         delete tareas[e.target.dataset.id]
         pintarTareas()
-        // console.log(tareas)
+      
     }
 
     if (e.target.classList.contains('fa-undo-alt')) {
         tareas[e.target.dataset.id].estado = false
         pintarTareas()
-        // console.log(tareas)
+      
     }
     
 
